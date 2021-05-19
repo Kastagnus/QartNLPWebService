@@ -15,7 +15,7 @@ class AdminModelView(ModelView):
         return redirect(url_for('user.login'))
 
 class IndexView(AdminIndexView):
-    column_exclude_list = ['passwor', ]
+    column_exclude_list = ['password', ]
 
     def is_accessible(self):
         return current_user.has_role("Admin")
